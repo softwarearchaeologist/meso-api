@@ -1,8 +1,7 @@
 `use strict`;
 
 import { fetchAmmPrices } from '../../utils/fetchAmmPrices';
-import { fetchDmmPrices } from '../../utils/fetchDmmPrices';
-import { fetchMooPrices } from '../../utils/fetchMooPrices';
+// import { fetchDmmPrices } from '../../utils/fetchDmmPrices';
 import { fetchCoinGeckoPrices } from '../../utils/fetchCoinGeckoPrices';
 
 import getNonAmmPrices from './getNonAmmPrices';
@@ -185,7 +184,7 @@ import finnLpPools from '../../data/moonriver/finnLpPools.json';
 import blockMinePools from '../../data/degens/blockMineLpPools.json';
 import biswapPools from '../../data/biswapLpPools.json';
 import chargePools from '../../data/degens/chargeLpPools.json';
-import charmPools from '../../data/fantom/charmLpPools.json';
+// import charmPools from '../../data/fantom/charmLpPools.json';
 import solarbeamDualLpV2Pools from '../../data/moonriver/solarbeamDualLpV2Pools.json';
 import liquidusPools from '../../data/cronos/liquidusLpPools.json';
 import sushiv2Celo from '../../data/celo/sushiv2LpPools.json';
@@ -196,7 +195,7 @@ import netswapPools from '../../data/metis/netswapLpPools.json';
 import dibsLpPools from '../../data/degens/dibsLpPools.json';
 import pangolinV2Pools from '../../data/avax/pangolinv2LpPools.json';
 import t2ombLpPools from '../../data/fantom/2ombLpPools.json';
-import omnidexLpPools  from '../../data/telos/omnidexLpPools.json';
+import omnidexLpPools from '../../data/telos/omnidexLpPools.json';
 
 const INIT_DELAY = 0 * 60 * 1000;
 const REFRESH_INTERVAL = 5 * 60 * 1000;
@@ -214,7 +213,7 @@ const pools = [
   ...liquidusPools,
   ...biswapPools,
   ...solarbeamDualLpV2Pools,
-  ...charmPools,
+  // ...charmPools,
   ...chargePools,
   ...blockMinePools,
   ...oldPools,
@@ -391,10 +390,10 @@ const pools = [
   ...thugsPools,
   ...cakeLpV1Pools,
   ...cakeLpPools,
-  ...omnidexLpPools
+  ...omnidexLpPools,
 ];
 
-const dmmPools = [...kyberPools, ...oldDmmPools];
+// const dmmPools = [...kyberPools, ...oldDmmPools];
 
 const coinGeckoCoins = [
   'stasis-eurs',
@@ -424,22 +423,23 @@ const updateAmmPrices = async () => {
   try {
     const coinGeckoPrices = fetchCoinGeckoPrices(coinGeckoCoins);
     const ammPrices = fetchAmmPrices(pools, knownPrices);
-    const dmmPrices = fetchDmmPrices(dmmPools, knownPrices);
+    // const dmmPrices = fetchDmmPrices(dmmPools, knownPrices);
 
-    const mooPrices = ammPrices.then(async ({ poolPrices, tokenPrices }) => {
-      return await fetchMooPrices(mooTokens, tokenPrices, poolPrices);
-    });
+    // const mooPrices = ammPrices.then(async ({ poolPrices, tokenPrices }) => {
+    //   return await fetchMooPrices(mooTokens, tokenPrices, poolPrices);
+    // });
 
     const tokenPrices = ammPrices.then(async ({ _, tokenPrices }) => {
-      const dmm = await dmmPrices;
-      const mooTokenPrices = await mooPrices;
-      return { ...tokenPrices, ...dmm.tokenPrices, ...mooTokenPrices, ...(await coinGeckoPrices) };
+      // const dmm = await dmmPrices;
+      // const mooTokenPrices = await mooPrices;
+      
+      return { ...tokenPrices, ...(await coinGeckoPrices) };
     });
 
     const lpPrices = ammPrices.then(async ({ poolPrices, _ }) => {
-      const dmm = await dmmPrices;
+      // const dmm = await dmmPrices;
       const nonAmmPrices = await getNonAmmPrices(await tokenPrices);
-      return { ...poolPrices, ...dmm.poolPrices, ...nonAmmPrices };
+      return { ...poolPrices, ...nonAmmPrices };
     });
 
     await tokenPrices;
@@ -461,7 +461,8 @@ const updateAmmPrices = async () => {
 };
 
 export const getAmmTokensPrices = async () => {
-  return await tokenPricesCache;
+  const prices = await tokenPricesCache;  
+  return prices;
 };
 
 export const getAmmLpPrices = async () => {

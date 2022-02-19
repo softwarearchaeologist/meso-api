@@ -78,7 +78,7 @@ const dinoClient = client('https://api.thegraph.com/subgraphs/name/jannervegloba
 const fusefiClient = client('https://api.thegraph.com/subgraphs/name/fuseio/fuseswap');
 const netswapClient = client('https://api.netswap.io/graph/subgraphs/name/netswap/exchange');
 
-const isSushiClient = client => {
+export const isSushiClient = client => {
   return (
     client === sushiClient ||
     client === sushiOneClient ||
@@ -91,7 +91,7 @@ const isSushiClient = client => {
   );
 };
 
-const isBeetClient = client => {
+export const isBeetClient = client => {
   return client === beetClient;
 };
 

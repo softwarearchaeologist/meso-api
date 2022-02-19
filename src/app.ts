@@ -26,6 +26,6 @@ app.context.cache = {};
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 app.listen(port);
 console.log(`> meso-api running! (:${port})`);

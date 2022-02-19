@@ -47,7 +47,8 @@ const MULTICALLS: Record<ChainId, Pick<BeefyFinance, 'multicall'>['multicall']> 
   [ChainId.aurora]: addressBookByChainId[ChainId.aurora].platforms.beefyfinance.multicall,
   [ChainId.fuse]: addressBookByChainId[ChainId.fuse].platforms.beefyfinance.multicall,
   [ChainId.metis]: addressBookByChainId[ChainId.metis].platforms.beefyfinance.multicall,
-  [ChainId.telos]: addressBookByChainId[ChainId.telos].platforms.beefyfinance.multicall
+  [ChainId.telos]: addressBookByChainId[ChainId.telos].platforms.beefyfinance.multicall,
+  
 };
 
 const clients: Record<keyof typeof ChainId, Web3[]> = {

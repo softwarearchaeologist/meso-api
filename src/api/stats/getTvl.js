@@ -30,6 +30,9 @@ const {
 
   CRONOS_CHAIN_ID,
   CRONOS_VAULTS_ENDPOINT,
+  
+  TELOS_CHAIN_ID,
+  TELOS_VAULTS_ENDPOINT,
 
   //AURORA_CHAIN_ID,
   //AURORA_VAULTS_ENDPOINT,
@@ -96,6 +99,11 @@ const chains = [
     chainId: CRONOS_CHAIN_ID,
     vaultsEndpoint: CRONOS_VAULTS_ENDPOINT,
     governancePool: require('../../data/cronos/governancePool.json'),
+  },
+  {
+    chainId: TELOS_CHAIN_ID,
+    vaultsEndpoint: TELOS_VAULTS_ENDPOINT,
+    // governancePool: require('../../data/cronos/governancePool.json'),
   },
   // {
   //  chainId: AURORA_CHAIN_ID,

@@ -33,7 +33,7 @@
     "lp1": {
       "address": "0xd2504a02fABd7E546e41aD39597c377cA8B0E1Df",
       "oracle": "tokens",
-      "oracleId": "Charm",
+      "oracleId": "CHARM",
       "decimals": "1e18"
     }
   }

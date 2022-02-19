@@ -1,5 +1,5 @@
 const { getCronosApys } = require('./cronos');
-
+const { getTelosApys } = require('./telos');
 
 const INIT_DELAY = process.env.INIT_DELAY || 60 * 1000;
 const REFRESH_INTERVAL = 15 * 60 * 1000;
@@ -18,9 +18,7 @@ const updateApys = async () => {
   console.log('> updating apys');
 
   try {
-    const results = await Promise.allSettled([      
-      getCronosApys(),      
-    ]);
+    const results = await Promise.allSettled([getCronosApys(), getTelosApys()]);
 
     for (const result of results) {
       if (result.status !== 'fulfilled') {
