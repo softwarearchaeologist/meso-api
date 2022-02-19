@@ -422,6 +422,9 @@ const updateAmmPrices = async () => {
   console.log('> updating amm prices');
   try {
     const coinGeckoPrices = fetchCoinGeckoPrices(coinGeckoCoins);
+    // pools.map(p => {
+    //   if (p.chainId === 40) console.log(p) 
+    // })
     const ammPrices = fetchAmmPrices(pools, knownPrices);
     // const dmmPrices = fetchDmmPrices(dmmPools, knownPrices);
 

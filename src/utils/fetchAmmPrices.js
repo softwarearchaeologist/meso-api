@@ -89,7 +89,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
     }
 
     const unsolved = filtered.slice();
-    let solving = true;
+    let solving = true;    
     while (solving) {
       solving = false;
 
