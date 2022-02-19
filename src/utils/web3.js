@@ -42,6 +42,9 @@ module.exports = {
   get metisWeb3() {
     return chainRandomClients.metisRandomClient();
   },
+  get telosWeb3() {
+    return chainRandomClients.telosRandomClient();
+  },
 
   web3Factory: _web3Factory,
 

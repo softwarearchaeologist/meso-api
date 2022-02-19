@@ -45,6 +45,7 @@ const CELO_RPC = process.env.CELO_RPC || 'https://forno.celo.org';
 const MOONRIVER_RPC = process.env.MOONRIVER_RPC || 'https://rpc.moonriver.moonbeam.network';
 const MOONBEAM_RPC = process.env.MOONBEAM_RPC || 'https://rpc.api.moonbeam.network';
 const CRONOS_RPC = process.env.CRONOS_RPC || 'https://rpc.vvs.finance';
+const TELOS_RPC = process.env.TELOS_RPC || 'https://mainnet.telos.net/evm';
 const AURORA_RPC =
   process.env.AURORA_RPC ||
   'https://mainnet.aurora.dev/Fon6fPMs5rCdJc4mxX4kiSK1vsKdzc3D8k6UF8aruek';
@@ -65,6 +66,7 @@ const AURORA_CHAIN_ID = ChainId.aurora;
 const FUSE_CHAIN_ID = ChainId.fuse;
 const METIS_CHAIN_ID = ChainId.metis;
 const MOONBEAM_CHAIN_ID = ChainId.moonbeam;
+const TELOS_CHAIN_ID = ChainId.telos;
 
 const DFYN_LPF = 0.003;
 const SUSHI_LPF = 0.0025;
@@ -97,7 +99,8 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.aurora]: AURORA_RPC,
   [ChainId.fuse]: FUSE_RPC,
   [ChainId.metis]: METIS_RPC,
-  [ChainId.moonbeam]: MOONBEAM_RPC
+  [ChainId.moonbeam]: MOONBEAM_RPC,
+  [ChainId.telos]: TELOS_RPC,
 };
 
 const BSC_VAULTS_ENDPOINT =
@@ -120,6 +123,8 @@ const MOONRIVER_VAULTS_ENDPOINT =
   'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/moonriver_pools.js';
 const CRONOS_VAULTS_ENDPOINT =
   'https://raw.githubusercontent.com/softwarearchaeologist/meso-vaults/main/cronos.json';
+const TELOS_VAULTS_ENDPOINT =
+  'https://raw.githubusercontent.com/softwarearchaeologist/meso-vaults/main/telos.json';
 //const AURORA_VAULTS_ENDPOINT =
 //  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/aurora_pools.js';
 const FUSE_VAULTS_ENDPOINT =
@@ -140,6 +145,7 @@ const MULTICHAIN_ENDPOINTS = {
   // celo: CELO_VAULTS_ENDPOINT,
   // moonriver: MOONRIVER_VAULTS_ENDPOINT,
   cronos: CRONOS_VAULTS_ENDPOINT,
+  telos: TELOS_VAULTS_ENDPOINT,
   // aurora: AURORA_VAULTS_ENDPOINT,
   // fuse: FUSE_VAULTS_ENDPOINT,
   // metis: METIS_VAULTS_ENDPOINT,
@@ -186,6 +192,9 @@ export {
   CRONOS_RPC,
   CRONOS_CHAIN_ID,
   CRONOS_VAULTS_ENDPOINT,
+  TELOS_RPC,
+  TELOS_VAULTS_ENDPOINT,
+  TELOS_CHAIN_ID,
   AURORA_RPC,
   AURORA_CHAIN_ID,
   // AURORA_VAULTS_ENDPOINT,

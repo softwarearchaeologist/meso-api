@@ -26,7 +26,7 @@ const updateMultichainVaults = async () => {
   try {
     for (let chain in MULTICHAIN_ENDPOINTS) {
       let endpoint = MULTICHAIN_ENDPOINTS[chain];
-      let chainVaults = await getVaults(endpoint);      
+      let chainVaults = await getVaults(endpoint);            
       chainVaults = await getStrategies(chainVaults, chain);
       chainVaults = await getLastHarvests(chainVaults, chain);      
 

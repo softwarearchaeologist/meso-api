@@ -4,6 +4,7 @@ import { solarbeam } from '../packages/address-book/address-book/moonriver/platf
 import { trisolaris } from '../packages/address-book/address-book/aurora/platforms/trisolaris';
 import { biswap } from '../packages/address-book/address-book/bsc/platforms/biswap';
 import { netswap } from '../packages/address-book/address-book/metis/platforms/netswap';
+import { omnidex } from '../packages/address-book/address-book/telos/platforms/omnidex';
 
 const yargs = require('yargs');
 const fs = require('fs');
@@ -66,6 +67,11 @@ const projects = {
     prefix: 'netswap',
     file: '../src/data/metis/netswapLpPools.json',
     masterchef: netswap.masterchef,
+  },
+  omnidex: {
+    prefix: 'omnidex',
+    file: '../src/data/telos/omnidexLpPools.json',
+    masterchef: omnidex.masterchef,
   },
 };
 

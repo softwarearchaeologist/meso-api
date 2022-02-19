@@ -16,6 +16,7 @@ const MULTICALLS = {
   1313161554: '0xFE40f6eAD11099D91D51a945c145CFaD1DD15Bb8',
   122: '0xE99c8A590c98c7Ae9FB3B7ecbC115D2eBD533B50',
   1088: '0xfcDD5a02C611ba6Fe2802f885281500EC95805d7',
+  40: '0xdC4869bea6E2504fa791915e33DF1a2f453cae69',
 };
 
 const MulticallAbi = require('../abis/BeefyPriceMulticall.json');
@@ -58,8 +59,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
   });
 
   for (let chain in MULTICALLS) {
-    let filtered = pools.filter(p => p.chainId == chain);
-
+    let filtered = pools.filter(p => p.chainId == chain);    
     // Old BSC pools don't have the chainId attr
     if (chain == '56') {
       filtered = pools.filter(p => p.chainId === undefined).concat(filtered);

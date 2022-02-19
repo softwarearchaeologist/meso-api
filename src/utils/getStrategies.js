@@ -12,9 +12,9 @@ const getStrategies = async (vaults, chain) => {
   
   const web3 = _web3Factory(ChainId[chain]);
   const multicall = new MultiCall(web3, multicallAddress(ChainId[chain]));
-
   // Split query in batches
   const query = vaults.map(v => v.earnedTokenAddress);
+  
   for (let i = 0; i < vaults.length; i += BATCH_SIZE) {
     const strategyCalls = [];
     let batch = query.slice(i, i + BATCH_SIZE);
@@ -26,8 +26,7 @@ const getStrategies = async (vaults, chain) => {
     }
 
     const res = await multicall.all([strategyCalls]);
-    const strategies = res[0].map(v => v.strategy);
-
+    const strategies = res[0].map(v => v.strategy);        
     // Merge fetched data
     for (let j = 0; j < batch.length; j++) {
       vaults[j + i].strategy = strategies[j];
