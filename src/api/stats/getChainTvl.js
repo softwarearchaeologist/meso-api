@@ -12,7 +12,7 @@ const getChainTvl = async chain => {
   const chainId = chain.chainId;  
   const vaults = await getVaults(chain.vaultsEndpoint);
   const vaultBalances = await getVaultBalances(chainId, vaults);
-
+  
   let tvls = { [chainId]: {} };
   for (let i = 0; i < vaults.length; i++) {
     const vault = vaults[i];
