@@ -98,8 +98,7 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.cronos]: CRONOS_RPC,
   [ChainId.aurora]: AURORA_RPC,
   [ChainId.fuse]: FUSE_RPC,
-  [ChainId.metis]: METIS_RPC,
-  [ChainId.moonbeam]: MOONBEAM_RPC,
+  [ChainId.metis]: METIS_RPC,  
   [ChainId.telos]: TELOS_RPC,
 };
 

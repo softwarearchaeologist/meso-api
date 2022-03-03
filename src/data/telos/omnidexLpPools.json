@@ -1,5 +1,24 @@
 [
   {
+    "name": "omnidex-wtlos-wbtc",
+    "address": "0x427E9A7bb848444a72faA3248c48F3B302429725",
+    "decimals": "1e18",
+    "poolId": 4,
+    "chainId": 40,
+    "lp0": {
+      "address": "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E",
+      "oracle": "tokens",
+      "oracleId": "WTLOS",
+      "decimals": "1e18"
+    },
+    "lp1": {
+      "address": "0xf390830DF829cf22c53c8840554B98eafC5dCBc2",
+      "oracle": "tokens",
+      "oracleId": "WBTC",
+      "decimals": "1e8"
+    }
+  },
+  {
     "name": "omnidex-wtlos-eth",
     "address": "0xd0D08c23d0cFd88457cDD43CaF34c16E3A29e85F",
     "decimals": "1e18",

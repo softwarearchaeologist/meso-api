@@ -59,7 +59,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
   });
 
   for (let chain in MULTICALLS) {
-    let filtered = pools.filter(p => p.chainId == chain);    
+    let filtered = pools.filter(p => p.chainId == chain);
     // Old BSC pools don't have the chainId attr
     if (chain == '56') {
       filtered = pools.filter(p => p.chainId === undefined).concat(filtered);
@@ -77,6 +77,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
       try {
         buf = await multicall.getLpInfo(batch);
       } catch (e) {
+        console.log(chain);
         console.error('fetchAmmPrices', e);
       }
 
@@ -89,7 +90,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
     }
 
     const unsolved = filtered.slice();
-    let solving = true;    
+    let solving = true;
     while (solving) {
       solving = false;
 

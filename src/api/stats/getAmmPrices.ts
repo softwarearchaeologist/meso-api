@@ -423,7 +423,7 @@ const updateAmmPrices = async () => {
   try {
     const coinGeckoPrices = fetchCoinGeckoPrices(coinGeckoCoins);
     // pools.map(p => {
-    //   if (p.chainId === 40) console.log(p) 
+    //   if (p.chainId === 40) console.log(p)
     // })
     const ammPrices = fetchAmmPrices(pools, knownPrices);
     // const dmmPrices = fetchDmmPrices(dmmPools, knownPrices);
@@ -435,14 +435,18 @@ const updateAmmPrices = async () => {
     const tokenPrices = ammPrices.then(async ({ _, tokenPrices }) => {
       // const dmm = await dmmPrices;
       // const mooTokenPrices = await mooPrices;
-      
+
       return { ...tokenPrices, ...(await coinGeckoPrices) };
     });
 
     const lpPrices = ammPrices.then(async ({ poolPrices, _ }) => {
       // const dmm = await dmmPrices;
-      const nonAmmPrices = await getNonAmmPrices(await tokenPrices);
-      return { ...poolPrices, ...nonAmmPrices };
+      // const nonAmmPrices = await getNonAmmPrices(await tokenPrices);
+      return {
+        ...poolPrices,
+
+      //  ...nonAmmPrices,
+      };
     });
 
     await tokenPrices;
@@ -464,7 +468,7 @@ const updateAmmPrices = async () => {
 };
 
 export const getAmmTokensPrices = async () => {
-  const prices = await tokenPricesCache;  
+  const prices = await tokenPricesCache;
   return prices;
 };
 
