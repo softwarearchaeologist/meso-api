@@ -5,6 +5,8 @@ import { trisolaris } from '../packages/address-book/address-book/aurora/platfor
 import { biswap } from '../packages/address-book/address-book/bsc/platforms/biswap';
 import { netswap } from '../packages/address-book/address-book/metis/platforms/netswap';
 import { omnidex } from '../packages/address-book/address-book/telos/platforms/omnidex';
+import { zappy } from '../packages/address-book/address-book/telos/platforms/zappy';
+
 
 const yargs = require('yargs');
 const fs = require('fs');
@@ -73,6 +75,11 @@ const projects = {
     file: '../src/data/telos/omnidexLpPools.json',
     masterchef: omnidex.masterchef,
   },
+  zappy: {
+    prefix: 'zappy',
+    file: '../src/data/telos/zappyLpPools.json',
+    masterchef: zappy.masterchef
+  }
 };
 
 const args = yargs.options({

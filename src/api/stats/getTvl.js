@@ -98,7 +98,7 @@ const chains = [
   {
     chainId: CRONOS_CHAIN_ID,
     vaultsEndpoint: CRONOS_VAULTS_ENDPOINT,
-    governancePool: require('../../data/cronos/governancePool.json'),
+    // governancePool: require('../../data/cronos/governancePool.json'),
   },
   {
     chainId: TELOS_CHAIN_ID,

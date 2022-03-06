@@ -196,6 +196,7 @@ import dibsLpPools from '../../data/degens/dibsLpPools.json';
 import pangolinV2Pools from '../../data/avax/pangolinv2LpPools.json';
 import t2ombLpPools from '../../data/fantom/2ombLpPools.json';
 import omnidexLpPools from '../../data/telos/omnidexLpPools.json';
+import zappyLpPools from '../../data/telos/zappyLpPools.json';
 
 const INIT_DELAY = 0 * 60 * 1000;
 const REFRESH_INTERVAL = 5 * 60 * 1000;
@@ -391,6 +392,7 @@ const pools = [
   ...cakeLpV1Pools,
   ...cakeLpPools,
   ...omnidexLpPools,
+  ...zappyLpPools
 ];
 
 // const dmmPools = [...kyberPools, ...oldDmmPools];

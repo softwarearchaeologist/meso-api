@@ -30,6 +30,7 @@
     "fuse:fusefi:add": "ts-node scripts/add-quick.ts --network fuse --project fusefi",
     "metis:netswap:add": "ts-node scripts/add-farm.ts --network metis --project netswap",
     "telos:omnidex:add": "ts-node scripts/add-farm.ts --network telos --project omnidex",
+    "telos:zappy:add": "ts-node scripts/add-farm.ts --network telos --project zappy",
     "gen-abi-types": "abi-types-generator ./src/abis/matic/Telxchange/StakingRewards/StakingRewards.json --output='./src/abis/matic/Telxchange/StakingRewards/types'"
   },
   "dependencies": {

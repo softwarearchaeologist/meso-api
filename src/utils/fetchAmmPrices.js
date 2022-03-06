@@ -10,8 +10,7 @@ const MULTICALLS = {
   43114: '0xF7d6f0418d37B7Ec8D207fF0d10897C2a3F92Ed5',
   1666600000: '0xa9E6E271b27b20F65394914f8784B3B860dBd259',
   42161: '0x405EE7F4f067604b787346bC22ACb66b06b15A4B',
-  42220: '0xE99c8A590c98c7Ae9FB3B7ecbC115D2eBD533B50',
-  1285: '0x8a198BCbF313A5565c64A7Ed61FaA413eB4E0931',
+  42220: '0xE99c8A590c98c7Ae9FB3B7ecbC115D2eBD533B50',  
   25: '0x405EE7F4f067604b787346bC22ACb66b06b15A4B',
   1313161554: '0xFE40f6eAD11099D91D51a945c145CFaD1DD15Bb8',
   122: '0xE99c8A590c98c7Ae9FB3B7ecbC115D2eBD533B50',
@@ -76,8 +75,7 @@ const fetchAmmPrices = async (pools, knownPrices) => {
       let buf = [];
       try {
         buf = await multicall.getLpInfo(batch);
-      } catch (e) {
-        console.log(chain);
+      } catch (e) {        
         console.error('fetchAmmPrices', e);
       }
 

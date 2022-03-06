@@ -1,7 +1,8 @@
 import getOmnidexApys from './getOmnidexApys';
+import getZappyApys from './getZappyApys';
 
-const getApys = [
-  getOmnidexApys
+const getApys = [getOmnidexApys, 
+  getZappyApys
 ];
 
 const getTelosApys = async () => {

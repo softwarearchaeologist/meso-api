@@ -27,6 +27,17 @@ const _tokens = {
           'OmniDex is an automated market-making (AMM) decentralized exchange.',
         logoURI: 'https://raw.githubusercontent.com/softwarearchaeologist/meso-assets/main/tokens/charm.png',
     },
+    ZAP: {
+        name: 'ZAP',
+        symbol: 'ZAP',
+        address: '0x9a271e3748f59222f5581bae2540daa5806b3f77',
+        chainId: 40,
+        decimals: 18,
+        website: 'https://zappy.finance/',
+        description:
+          'Zappy is an automated market-making (AMM) decentralized exchange (DEX) for the Telos network.',
+        logoURI: 'https://raw.githubusercontent.com/softwarearchaeologist/meso-assets/main/tokens/charm.png',
+    },
     USDC: {
         name: 'USDC',
         symbol: 'USDC',
