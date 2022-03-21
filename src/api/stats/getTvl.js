@@ -50,76 +50,18 @@ const REFRESH_INTERVAL = 15 * 60 * 1000;
 let tvl = {};
 
 const chains = [
-  // {
-  //   chainId: BSC_CHAIN_ID,
-  //   vaultsEndpoint: BSC_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/governancePool.json'),
-  // },
-  // {
-  //   chainId: POLYGON_CHAIN_ID,
-  //   vaultsEndpoint: POLYGON_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/matic/governancePool.json'),
-  // },
-  // {
-  //   chainId: FANTOM_CHAIN_ID,
-  //   vaultsEndpoint: FANTOM_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/fantom/governancePool.json'),
-  // },
-  // {
-  //   chainId: HECO_CHAIN_ID,
-  //   vaultsEndpoint: HECO_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/heco/governancePool.json'),
-  // },
-  // {
-  //   chainId: AVAX_CHAIN_ID,
-  //   vaultsEndpoint: AVAX_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/avax/governancePool.json'),
-  // },
-  // {
-  //   chainId: ONE_CHAIN_ID,
-  //   vaultsEndpoint: ONE_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/one/governancePool.json'),
-  // },
-  // {
-  //   chainId: ARBITRUM_CHAIN_ID,
-  //   vaultsEndpoint: ARBITRUM_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/arbitrum/governancePool.json'),
-  // },
-  // {
-  //   chainId: CELO_CHAIN_ID,
-  //   vaultsEndpoint: CELO_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/celo/governancePool.json'),
-  // },
-  // {
-  //   chainId: MOONRIVER_CHAIN_ID,
-  //   vaultsEndpoint: MOONRIVER_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/moonriver/governancePool.json'),
-  // },
   {
     chainId: CRONOS_CHAIN_ID,
     vaultsEndpoint: CRONOS_VAULTS_ENDPOINT,
+    name: 'cronos'
     // governancePool: require('../../data/cronos/governancePool.json'),
   },
   {
     chainId: TELOS_CHAIN_ID,
     vaultsEndpoint: TELOS_VAULTS_ENDPOINT,
-    // governancePool: require('../../data/cronos/governancePool.json'),
+    name: 'telos'
   },
-  // {
-  //  chainId: AURORA_CHAIN_ID,
-  //  vaultsEndpoint: AURORA_VAULTS_ENDPOINT,
-  //  governancePool: require('../../data/aurora/governancePool.json'),
-  //},
-  // {
-  //   chainId: FUSE_CHAIN_ID,
-  //   vaultsEndpoint: FUSE_VAULTS_ENDPOINT,
-  //   //governancePool: require('../../data/fuse/governancePool.json'),
-  // },
-  // {
-  //   chainId: METIS_CHAIN_ID,
-  //   vaultsEndpoint: METIS_VAULTS_ENDPOINT,
-  //   governancePool: require('../../data/metis/governancePool.json'),
-  // },
+
 ];
 
 const getTvl = () => {

@@ -1,7 +1,7 @@
 const getMultichainVaults = require('../stats/getMultichainVaults');
 
 async function multichainVaults(ctx) {
-  try {
+  try {    
     const multichainVaults = await getMultichainVaults();
     ctx.status = 200;
     ctx.body = [...multichainVaults];

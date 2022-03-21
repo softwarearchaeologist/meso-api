@@ -3,16 +3,18 @@ const { MultiCall } = require('eth-multicall');
 const { web3Factory, multicallAddress } = require('../../utils/web3');
 const getVaults = require('../../utils/getVaults.js');
 const fetchPrice = require('../../utils/fetchPrice');
-const { EXCLUDED_IDS_FROM_TVL } = require('../../constants');
+const { EXCLUDED_IDS_FROM_TVL, LOCAL_ENDPOINTS } = require('../../constants');
 
 const BeefyVaultV6ABI = require('../../abis/BeefyVaultV6.json');
 const { getTotalStakedInUsd } = require('../../utils/getTotalStakedInUsd');
 
 const getChainTvl = async chain => {
-  const chainId = chain.chainId;  
-  const vaults = await getVaults(chain.vaultsEndpoint);
-  const vaultBalances = await getVaultBalances(chainId, vaults);
+  const chainId = chain.chainId;
   
+  const vaults = await getVaults(chain.vaultsEndpoint);
+  
+  const vaultBalances = await getVaultBalances(chainId, vaults);
+
   let tvls = { [chainId]: {} };
   for (let i = 0; i < vaults.length; i++) {
     const vault = vaults[i];

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const getVaults = async vaultsEndpoint => {
-  try {
+  try {    
     const { data: vaults } = await axios.get(vaultsEndpoint);        
     return vaults;
   } catch (err) {
