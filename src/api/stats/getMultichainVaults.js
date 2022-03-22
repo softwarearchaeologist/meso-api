@@ -3,7 +3,7 @@ const { getStrategies } = require('../../utils/getStrategies.js');
 const { getLastHarvests } = require('../../utils/getLastHarvests.js');
 
 
-const { MULTICHAIN_ENDPOINTS, LOCAL_ENDPOINTS } = require('../../constants');
+const { MULTICHAIN_ENDPOINTS } = require('../../constants');
 
 
 const INIT_DELAY = 0 * 1000;

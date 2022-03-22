@@ -3,7 +3,7 @@ const { MultiCall } = require('eth-multicall');
 const { web3Factory, multicallAddress } = require('../../utils/web3');
 const getVaults = require('../../utils/getVaults.js');
 const fetchPrice = require('../../utils/fetchPrice');
-const { EXCLUDED_IDS_FROM_TVL, LOCAL_ENDPOINTS } = require('../../constants');
+const { EXCLUDED_IDS_FROM_TVL } = require('../../constants');
 
 const BeefyVaultV6ABI = require('../../abis/BeefyVaultV6.json');
 const { getTotalStakedInUsd } = require('../../utils/getTotalStakedInUsd');
