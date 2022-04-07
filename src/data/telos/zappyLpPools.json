@@ -1,5 +1,24 @@
 [
   {
+    "name": "zappy-usdc-zap",
+    "address": "0x19fa5D23dB98184e777E7f0b9Ec720F266471f3f",
+    "decimals": "1e18",
+    "poolId": 9,
+    "chainId": 40,
+    "lp0": {
+      "address": "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
+      "oracle": "tokens",
+      "oracleId": "USDC",
+      "decimals": "1e6"
+    },
+    "lp1": {
+      "address": "0x9A271E3748F59222f5581BaE2540dAa5806b3F77",
+      "oracle": "tokens",
+      "oracleId": "ZAP",
+      "decimals": "1e18"
+    }
+  },
+  {
     "name": "zappy-ftm-wtlos",
     "address": "0x62514Ad55D9fbb7eA66a915a1A1E11872F5FAA90",
     "decimals": "1e18",

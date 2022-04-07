@@ -124,6 +124,9 @@ const getFarmApys = async (params: MasterChefApysParams): Promise<BigNumber[]> =
       console.log(
         pool.name,
         apy.toNumber(),
+        yearlyRewards.toNumber(),
+        yearlyRewardsInUsd.toNumber(),
+        tokenPrice,
         totalStakedInUsd.valueOf(),
         yearlyRewardsInUsd.valueOf()
       );

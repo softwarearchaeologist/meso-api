@@ -1,6 +1,5 @@
 import { ChainId } from '../packages/address-book/address-book';
 
-
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
 
 const BASE_HPY = 2190;
@@ -99,7 +98,7 @@ const MULTICHAIN_RPC: Record<ChainId, string> = {
   [ChainId.cronos]: CRONOS_RPC,
   [ChainId.aurora]: AURORA_RPC,
   [ChainId.fuse]: FUSE_RPC,
-  [ChainId.metis]: METIS_RPC,  
+  [ChainId.metis]: METIS_RPC,
   [ChainId.telos]: TELOS_RPC,
 };
 
@@ -124,7 +123,7 @@ const MOONRIVER_VAULTS_ENDPOINT =
 const CRONOS_VAULTS_ENDPOINT =
   'https://raw.githubusercontent.com/softwarearchaeologist/meso-vaults/main/cronos.json';
 const TELOS_VAULTS_ENDPOINT =
-  'https://raw.githubusercontent.com/softwarearchaeologist/meso-vaults/main/telos.json';
+  'https://raw.githubusercontent.com/Meso-Finance/meso-vaults/main/telos.json';
 //const AURORA_VAULTS_ENDPOINT =
 //  'https://raw.githubusercontent.com/beefyfinance/beefy-app/prod/src/features/configure/vault/aurora_pools.js';
 const FUSE_VAULTS_ENDPOINT =
@@ -151,8 +150,6 @@ const MULTICHAIN_ENDPOINTS = {
   // metis: METIS_VAULTS_ENDPOINT,
   // moonbeam: MOONBEAM_VAULTS_ENDPOINT
 };
-
-
 
 const MESO_PERFORMANCE_FEE = 0.02;
 const SHARE_AFTER_PERFORMANCE_FEE = 1 - MESO_PERFORMANCE_FEE;

@@ -9,7 +9,7 @@ const getZappyApys = async () =>
     chainId: chainId,
     masterchef: '0x3D2c6bCED5f50f5412234b87fF0B445aBA4d10e9',
     tokenPerBlock: 'zapPerSecond',
-    hasMultiplier: false,
+    hasMultiplier: true,
     liquidityProviderFee: 0.0025,
     pools: pools,
     singlePools: [],
