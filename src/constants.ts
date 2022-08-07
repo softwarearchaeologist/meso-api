@@ -44,7 +44,7 @@ const ARBITRUM_RPC = process.env.ARBITRUM_RPC || 'https://arb1.arbitrum.io/rpc';
 const CELO_RPC = process.env.CELO_RPC || 'https://forno.celo.org';
 const MOONRIVER_RPC = process.env.MOONRIVER_RPC || 'https://rpc.moonriver.moonbeam.network';
 const MOONBEAM_RPC = process.env.MOONBEAM_RPC || 'https://rpc.api.moonbeam.network';
-const CRONOS_RPC = process.env.CRONOS_RPC || 'https://rpc.vvs.finance';
+const CRONOS_RPC = process.env.CRONOS_RPC || 'https://rpc.evl.finance';
 const TELOS_RPC = process.env.TELOS_RPC || 'https://mainnet.telos.net/evm';
 const AURORA_RPC =
   process.env.AURORA_RPC ||
